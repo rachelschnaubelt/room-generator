@@ -1,0 +1,36 @@
+@import './variables.scss';
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    height: 100%;
+    background: linear-gradient(to bottom, $forest, $olive);
+
+    #root {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+        min-height: 100%;
+        display: flex;
+        min-width: 100%;
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    min-height: 100%;
+    flex: 1;
+    margin: 0 auto;
+    max-width: 500px;
+    justify-content: center;
+}

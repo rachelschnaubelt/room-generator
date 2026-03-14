@@ -1,0 +1,61 @@
+@import '../../style/variables.scss';
+
+.cmp-room {
+    background-color: $cream;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;   
+    overflow: auto;
+    
+    @media screen and (min-height: 40rem) {
+        max-height: 50rem;
+    }
+    
+    &.initialized {
+        box-shadow: $cream-shadow;
+        row-gap: 2rem;
+        padding: 2.5rem 2rem 2rem;
+        flex: 1;
+    }
+
+    &.fade-out {
+        p {
+            animation: fadeOut 1s ease 0s 1 normal forwards;
+        }
+    }
+
+    &.fade-in {        
+        @for $counter from 1 through 5 {
+            p:nth-child(#{$counter}) {
+                animation: fadeIn 0.5s ease-in-out #{($counter - 1) * 0.7}s 1 normal forwards;
+                opacity: 0;
+            }
+        }
+    }
+
+    .cmp-button {
+        justify-self: flex-end;
+        margin-top: auto;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(0.5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

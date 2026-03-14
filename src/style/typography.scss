@@ -1,0 +1,52 @@
+
+@font-face {
+    font-family: overlock;
+    src: url(/Overlock-Regular.ttf);
+}
+
+@font-face {
+    font-family: overlock;
+    src: url(/Overlock-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: overlock;
+    src: url(/Overlock-Black.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: overlock;
+    src: url(/Overlock-Italic.ttf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: overlock;
+    src: url(/Overlock-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: overlock;
+    src: url(/Overlock-BlackItalic.ttf);
+    font-weight: 900;
+    font-style: italic;
+}
+
+:root {
+    color: $black;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: overlock;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+        font-size: 2rem;
+    }
+}
